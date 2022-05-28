@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:mvvm_example.Views"
+             xmlns:prism="http://prismlibrary.com/"
              mc:Ignorable="d" 
+             prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -17,7 +19,8 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <TextBlock Margin="5" Text="Name"/>
-            <TextBox MinWidth="300"></TextBox>
+            <TextBox MinWidth="300" Text="{Binding FirstName}"/>
+            <TextBlock Margin="5" Text="{Binding FirstName}"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <TextBlock Margin="5" Text="LastName"/>
