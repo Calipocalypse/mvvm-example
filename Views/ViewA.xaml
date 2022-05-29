@@ -19,7 +19,7 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <TextBlock Margin="5" Text="Name"/>
-            <TextBox MinWidth="300" Text="{Binding FirstName}"/>
+            <TextBox MinWidth="300" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock Margin="5" Text="{Binding FirstName}"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
@@ -30,5 +30,8 @@
             <TextBlock Margin="5" Text="Update Time"/>
             <TextBlock Margin="5" Text="Update Time"/>
         </StackPanel>
+		<Button Grid.Row="4" Width="200" Height="100" Content="Click Me!" Command="{Binding ClickMeCommand}">
+			
+		</Button>
     </Grid>
 </UserControl>
